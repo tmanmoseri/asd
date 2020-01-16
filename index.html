@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ASD &mdash;</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/animate.css?alt=media&token=80542ba8-a7a8-4cc2-a4cf-320e9b0c9484">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/icomoon.css?alt=media&token=7bc7caff-da33-4232-817b-c4870aa18503">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/simple-line-icons.css?alt=media&token=08667c34-fcd9-42c8-a648-e73a1e29ee39">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/magnific-popup.css?alt=media&token=fe5230d7-7c31-4d06-be20-7944af310180">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/bootstrap.css?alt=media&token=48163e08-3cef-4df9-8eac-70259f2bed73">
+
+	<!--
+	Default Theme Style
+	You can change the style.css (default color purple) to one of these styles
+
+	1. pink.css
+	2. blue.css
+	3. turquoise.css
+	4. orange.css
+	5. lightblue.css
+	6. brown.css
+	7. green.css
+
+	-->
+	<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/style.css?alt=media&token=b64fe847-d07f-4395-8f97-6428ffd3bc91">
+
+	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+	<link rel="stylesheet" id="theme-switch" href="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/style.css?alt=media&token=b64fe847-d07f-4395-8f97-6428ffd3bc91">
+	<!-- End demo purposes only -->
+
+
+	<style>
+	/* For demo purpose only */
+
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations li {
+		list-style: none;
+		display: block;
+		margin-bottom: 5px!important;
+		float: left;
+		width: 100%;
+	}
+	#colour-variations li a {
+		width: 100%;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+	}
+	#colour-variations li a:hover {
+	  	opacity: .9;
+	}
+	#colour-variations li a > span {
+		width: 33.33%;
+		height: 20px;
+		float: left;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+
+
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #f64662;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 2px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #fff;
+		text-decoration: none;
+		outline: none;
+	}
+	</style>
+	<!-- End demo purposes only -->
+
+
+	<!-- Modernizr JS -->
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/modernizr-2.6.2.min.js?alt=media&token=745ab022-b7f4-4150-95a0-a02872d55069"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		         <a class="navbar-brand" href="index.html">ASD</a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#" data-nav-section="portfolio"><span>Portfolio</span></a></li>
+		            <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
+								<li><a href="#" data-nav-section="plan"><span>Hosting</span></a></li>
+		            <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+		            <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
+
+	<!--==========================
+    Hero Section
+  ============================-->
+	<section id="fh5co-home" data-section="home"  data-stellar-background-ratio="0.5">
+
+
+			<img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/4.jpg?alt=media&token=2ca09ca6-d0ae-476d-8850-d5443e55d293" alt="Hero Imgs">
+
+		<div class="slant"></div>
+	</section>
+<br><br>
+	<section   id="fh5co-intro">
+  <div class="gradient"></div>
+		<div class="container">
+			<div class="row row-bottom-padded-lg">
+				<div class="fh5co-block to-animate" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/code.jpg?alt=media&token=8761b92d-f07b-4ea2-8e76-084a3fab465c);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text" >
+						<i class="fh5co-intro-icon icon-bulb"></i>
+						<h2>Our story</h2>
+						<p>Design is not just how it looks. Design is how it works. It's more than a logo an a strategy made visible</p>
+						<p><a href="#fh5co-about" class="btn btn-primary" >Read more</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/code.jpg?alt=media&token=8761b92d-f07b-4ea2-8e76-084a3fab465c);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-wrench"></i>
+						<h2>Design</h2>
+						<p>If you think maths is hard, try web design. Intutive design is how we give our Clients superpower!!</p>
+						<p><a href="#portfolio" class="btn btn-primary" >our works</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/server.jpg?alt=media&token=eb6ea479-e39d-46bf-beb9-b95aecf76ba2);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-rocket"></i>
+						<h2>Host</h2>
+						<p>Get a professional domain with affordable web hosting and get a perfect gift for holidays!!.</p>
+						<p><a href="#plan" class="btn btn-primary" >Coose plan</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="row watch-video text-center to-animate">
+				<span>Watch the video</span>
+
+				<a href="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/asd.mp4?alt=media&token=e6ad6b9f-d4af-4fb5-b95b-839272b95cd8" class="popup-vimeo btn-video"><i class="icon-play2"></i></a>
+			</div>
+		</div>
+	</section>
+<!--
+======================================
+ Portfolio
+======================================
+-->
+	<div class="section" data-section="portfolio" id="portfolio">
+			<div class="container">
+				<h1 class="text-center title"  >Portfolio</h1>
+				<div class="separator"></div>
+				<p class="lead text-center">Take a glance at some of our works.<br> we are working on a large milestone of projects.</p>
+				<br>
+				<div class="row object-non-visible" data-animation-effect="fadeIn">
+					<div class="col-md-12">
+
+
+						<!-- portfolio items start -->
+						<div class="isotope-container row grid-space-20" id="all">
+							<div class="col-sm-6 col-md-3 isotope-item web-design" id="web">
+								<div class="image-box">
+									<div class="overlay-container" >
+										<img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/net.jpeg?alt=media&token=7b643d0d-6b52-49dd-8aee-7f6957c533ff" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-1">
+											<i class="fa fa-search-plus"></i>
+											<span>Software development</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-1">Net# Developers</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-1" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Visit</span></button>
+												<h4 class="modal-title" id="project-1-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>About Net# Developers</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Net# Developers, establised in 2018...is an exclusive Information Technology Company that provides a wide range services from development, design, hosting and maintenance of massive business fold. We write a series of interrelated programming code, which provides the functionality of the developed software to your disposal. We build long lasting workmentship that is effective and pleasing to your eyes. </p>
+														</div>
+													<div class="col-md-6">
+														<img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/net.jpeg?alt=media&token=7b643d0d-6b52-49dd-8aee-7f6957c533ff" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<a href="https://firebasestorage.googleapis.com/v0/b/netdevelopers-cb3a7.appspot.com/o/index.html?alt=media&token=20397bd7-2b1e-4618-93b6-708d8936a9da#page-top"
+												<button type="button" class="btn btn-sm btn-default">Visit</button>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item app-development" >
+								<div class="image-box">
+									<div class="overlay-container" >
+										<img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/as.jpeg?alt=media&token=18ea40aa-a639-43e0-b647-aa1e1a0b2ce3" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-2">
+											<i class="fa fa-search-plus"></i>
+											<span>Bio</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-2">Andro Series</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-2" tabindex="-1" role="dialog" aria-labelledby="project-2-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-2-label">Bio</h4>
+											</div>
+											<div class="modal-body">
+												<h3>About Andro Series</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>I work predominantly in front-end design, development and integration. My career started in 2013 and since then I have gained extensive experience of web design and development in an academic, commercial for both profit and non environment. With a rounded knowledge of Web technologies and creative skills it enables me to work closely with designers to bring designs and interactive elements to life from wireframes, prototyping to site build. I frequently work on designs with complex interactions and integration. </p>
+													</div>
+													<div class="col-md-6">
+														<img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/as.jpeg?alt=media&token=18ea40aa-a639-43e0-b647-aa1e1a0b2ce3" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<a href="https://firebasestorage.googleapis.com/v0/b/myresume-d7579.appspot.com/o/Andro.html?alt=media&token=ca48b93f-4e2e-4a2e-8775-d6123377f6fd#about"
+												<button type="button" class="btn btn-sm btn-default">Visit</button>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/cwater.jpeg?alt=media&token=3832ed06-b13a-48f5-9e5d-ce2a13b6c03e" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-3">
+											<i class="fa fa-search-plus"></i>
+											<span>Construction</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-3">Cwater Construction</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-3" tabindex="-1" role="dialog" aria-labelledby="project-3-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-3-label">Cwater Construction</h4>
+											</div>
+											<div class="modal-body">
+												<h3>About Cwater</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Three years back, Mojalefa figured that the life of unemployment and struggle to get a job was just not in his dreams. He noticed how many people battled to build their own homes from scratch. He saw with his brother how he struggled to get an affordable house plan, struggled to buy material and aslo struggled to get a construction company he can trust. Mojalefa figured he could use his architectural skill, diploma in civil engineering & quantity surveying experience to help many like his brother. In September of 2014, Mojalefa sold his first house plan to a very happy client which was followed by many more clients who continued to use his services.
+														</p>
+														<p>
+															Three years later Mojalefa is running a growing company with more than three housing projects running at the same time, of which one of the projects is stationed in eastern cape. This growing company is called C-Water Construction, which currently has over 20 employees with two executive members:
+															Mojalefa Mmapheto: He possesses a Civil Engineering Diploma, Architecture Certificate and has experience in Quantity Survey and Building Designs. He is the Founder and CEO of C-Water. He designs the plans and organise all the building works.
+														</p>
+														<p>C-Water construction is a registered company under CIPC.
+ 													</p>
+													</div>
+													<div class="col-md-6">
+														<img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/cwater.jpeg?alt=media&token=3832ed06-b13a-48f5-9e5d-ce2a13b6c03e" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<a href="https://firebasestorage.googleapis.com/v0/b/cwater-fa467.appspot.com/o/index.html?alt=media"
+												<button type="button" class="btn btn-sm btn-default">Visit</button>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/iift.jpeg?alt=media&token=c2672478-f392-4299-9bfc-637c0a39cae7" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-4">
+											<i class="fa fa-search-plus"></i>
+											<span>Trading</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-4">Invest in Future Technology</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-4" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-4-label">Invest in Future Technology</h4>
+											</div>
+											<div class="modal-body">
+												<h3>About us</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>The one and only platform tha gives you free money generating engines build upon Wix framework. This platform entail the Futurenet system which is a social media site that actually pays you to be active on the platform
+														</p><p>The 3pexcel International is an e-marketing establishment that promotes partner products and services with the use of a unified loyalty card known as 3pexcel,
+
+														</p><p>IFA is the network marketing division of Clientèle Life, one of the most trusted and respected names in the South African financial services sector.
+
+															</p><p>BitBay is a fully-functional decentralized marketplace and smart contracting platform, backed by a secure cryptocurrency..Coming soon!
+
+															</p><p>Forex trading is the buying and selling of currency pairs for profit. To open a trade, a trader must choose a pair of currencies and the direction they anticipate the value of the trade to move in..Coming soon!
+
+ 													</p>
+													</div>
+													<div class="col-md-6">
+														<img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/iift.jpeg?alt=media&token=c2672478-f392-4299-9bfc-637c0a39cae7" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<a href="https://tmanmoseri.wixsite.com/iift"
+												<button type="button" class="btn btn-sm btn-default">Visit</button>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+          	</div>
+
+						</div>
+						<!-- portfolio items end -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+
+<!--
+===================
+Services
+===================
+-->
+
+	<section id="fh5co-services" data-section="services">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-12 section-heading text-left">
+					<h2 class=" left-border to-animate">Services</h2>
+					<div class="row">
+						<div class="col-md-8 subtext to-animate">
+							<h3>Our services varies from a wide range of ICT. See the listing below.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-video2"></i>
+					<h3>Web &amp; Graphic design</h3>
+					<p>Design is more than a logo. Design is a strategy made visible.We create responsive websites and design high quality designs such as posters, banners, flyers and logos. </p>
+				</div>
+
+
+
+
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-layers2"></i>
+					<h3>Web hosting</h3>
+					<p>We offers fast, reliable and secure web hosting. Your website deserves the best web hosting in South Africa from one of the leading web hosting companies in South Africa.</p>
+				</div>
+
+
+				<div class="clearfix visible-sm-block"></div>
+
+
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-monitor"></i>
+					<h3>Software development</h3>
+					<p>Best solutions that include application development and maintenance, system security, access management solutions and ICT solutions.</p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-anchor"></i>
+					<h3>System testing</h3>
+					<p>Are you looking to hire a software testing company? In an increasingly digital world, hiring a software testing company is a great way to improve your service.</p>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!--
+	===================
+	hosting plan
+	===================
+	-->
+	<section class="ftco-section bg-light" data-section="plan" id ="plan">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 text-center heading-section ftco-animate">
+					<h2 class="mb-4">Our Best Pricing</h2>
+					<p>We provide cheaper and afordable prices for quality hosting and maintence.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-lg-3 col-md-6 ftco-animate">
+					<div class="block-7">
+						<div class="text-center">
+							<h2 class="heading">Free</h2>
+							<span class="price"><sup>R</sup> <span class="number">0</span></span>
+							<span class="excerpt d-block">100% free.</span>
+							<h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+
+							<ul class="pricing-text mb-4">
+								<li><strong>150 GB</strong> Bandwidth</li>
+								<li><strong>1 GB</strong> Storage</li>
+								<li><strong>R100 / GB</strong> Premium</li>
+								<li>Customer preview</li>
+							</ul>
+							<a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 ftco-animate">
+					<div class="block-7">
+						<div class="text-center">
+							<h2 class="heading">Startup</h2>
+							<span class="price"><sup>R</sup> <span class="number">1500</span></span>
+							<span class="excerpt d-block">All features are included</span>
+							<h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+
+							<ul class="pricing-text mb-4">
+								<li><strong>450 GB</strong> Bandwidth</li>
+								<li><strong>400 GB</strong> Storage</li>
+								<li><strong>R250 / GB</strong> Premium</li>
+								<li>All features</li>
+							</ul>
+							<a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 ftco-animate">
+					<div class="block-7">
+						<div class="text-center">
+							<h2 class="heading">Premium</h2>
+							<span class="price"><sup>R</sup> <span class="number">3500</span></span>
+							<span class="excerpt d-block">All features are included</span>
+							<h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+
+							<ul class="pricing-text mb-4">
+								<li><strong>250 GB</strong> Bandwidth</li>
+								<li><strong>200 GB</strong> Storage</li>
+								<li><strong>5</strong>MySQL databases</li>
+								<li><strong>R500 / GB</strong> Premium</li>
+								<li>All features</li>
+							</ul>
+							<a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 ftco-animate">
+					<div class="block-7">
+						<div class="text-center">
+							<h2 class="heading">Pro</h2>
+							<span class="price"><sup>R</sup> <span class="number">6000</span></span>
+							<span class="excerpt d-block">All features are included</span>
+							<h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+
+							<ul class="pricing-text mb-4">
+								<li><strong>E-commerce</strong> online transactions</li>
+								<li><strong>E-commerce</strong> with cart</li>
+								<li><strong>Unlimited</strong> Bandwidth</li>
+								<li><strong>500 GB</strong> Storage</li>
+								<li><strong>5 </strong>MySQL databases</li>
+								<li><strong>R700 / GB</strong> Premiun</li>
+								<li>All features</li>
+							</ul>
+							<a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	<section id="fh5co-about" data-section="about">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-6 section-heading text-center">
+					<h2 class="to-animate">About</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Established in 2017 by Andries Moseri. Andro Series Developers (ASD) is an independently owned  IT agency headquartered in Johannesburg with 2 years  experience in the delivery of successful marketing campaigns.  Our services range from web, content marketing, social media apps, content creation, search engine marketing and SharePoint consulting.</h3>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-md-12">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/me.jpg?alt=media&token=7dcf451d-d557-40eb-8769-c0608d26b564" alt="Image"></figure>
+						<h3>Andro Series</h3>
+						<span class="fh5co-position">Full stack developer</span>
+						<p>Frontend-focused Full-Stack developer with a passion for both web and mobile apps design. I have experience working with JavaScript, Angular, Css3, C#, Java, Python, Go, firebase, jQuery, and countless other frontend and backend frameworks and tools, but I spend most of my time coding with HTML, Javascript, and CSS.</p>
+						<ul class="social social-circle">
+							<li><a href="https://twitter.com/AndroSeries"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/androseriesdev/"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section id="fh5co-counters" style="background-image: url(images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
+		<div class="fh5co-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center to-animate">
+					<h2>Fun Facts</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-briefcase to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="20" data-speed="5000" data-refresh-interval="50">20</span>
+						<span class="fh5co-counter-label">Finished projects</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-code to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="1409" data-speed="5000" data-refresh-interval="50">1409</span>
+						<span class="fh5co-counter-label">Consultations</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-code to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="1232" data-speed="5000" data-refresh-interval="50">1232</span>
+						<span class="fh5co-counter-label">Ideas</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-code to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="52" data-speed="5000" data-refresh-interval="50">20</span>
+						<span class="fh5co-counter-label">Happy clients</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-contact" data-section="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Get In Touch</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Please leave us a message, we will get back to you shortly.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-6 to-animate">
+					<h3>Contact Info</h3>
+					<ul class="fh5co-contact-info">
+						<li class="fh5co-contact-address ">
+							<i class="icon-home"></i>
+							15 Monrvia Street Isiphethweni<br>Tembisa 1632 Johannesburg 2000
+						</li>
+						<li><i class="icon-phone"></i> (+27)60 705 8717</li>
+						<li><i class="icon-envelope"></i>androseriesdevelopers@gmail.com</li>
+						<li><i class="icon-globe"></i> <a href="androseriesdev.ml" target="_blank">androseriesdev.ml</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-6 to-animate">
+					<h3>Contact Form</h3>
+					<div class="form-group ">
+						<label for="name" class="sr-only">Name</label>
+						<input id="name" class="form-control" placeholder="Name" type="text">
+					</div>
+					<div class="form-group ">
+						<label for="email" class="sr-only">Email</label>
+						<input id="email" class="form-control" placeholder="Email" type="email">
+					</div>
+					<div class="form-group ">
+						<label for="phone" class="sr-only">Phone</label>
+						<input id="phone" class="form-control" placeholder="Phone" type="text">
+					</div>
+					<div class="form-group ">
+						<label for="message" class="sr-only">Message</label>
+						<textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+					</div>
+					<div class="form-group ">
+						<input class="btn btn-primary btn-lg" value="Send Message" type="submit">
+					</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+
+	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>&copy; ASD All Rights Reserved. <br>Created by <a href="#" target="_blank">Andro Series</a> </a></p>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://twitter.com/AndroSeries"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/androseriesdev/"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-youtube"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- For demo purposes Only ( You may delete this anytime :-) -->
+	<div id="colour-variations">
+		<a class="option-toggle"><i class="icon-gear"></i></a>
+		<h3>Preset Colors</h3>
+		<ul>
+			<li>
+				<a href="javascript: void(0);" data-theme="style">
+					<span style="background: #3f95ea;"></span>
+					<span style="background: #52d3aa;"></span>
+					<span style="background: #f2f2f2;"></span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript: void(0);" data-theme="style2">
+					<span style="background: #329998;"></span>
+					<span style="background: #6cc99c;"></span>
+					<span style="background: #f2f2f2;"></span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript: void(0);" data-theme="style3">
+					<span style="background: #9f466e;"></span>
+					<span style="background: #c24d67;"></span>
+					<span style="background: #f2f2f2;"></span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript: void(0);" data-theme="style4">
+					<span style="background: #21825C;"></span>
+					<span style="background: #A4D792;"></span>
+					<span style="background: #f2f2f2;"></span>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+	<!-- End demo purposes only -->
+
+
+	<!-- jQuery -->
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/jquery.min.js?alt=media&token=d3988274-afd6-4719-9362-0863844bffe7"></script>
+	<!-- jQuery Easing -->
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/jquery.easing.1.3.js?alt=media&token=3c35a2da-4299-4fc7-812f-8234c71c00a8"></script>
+	<!-- Bootstrap -->
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/bootstrap.min.js?alt=media&token=7f788252-b357-4ca9-8927-0a2f40785d55"></script>
+	<!-- Waypoints -->
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/jquery.waypoints.min.js?alt=media&token=729d692c-b515-46ba-a8d8-4fa68b683874"></script>
+	<!-- Stellar Parallax -->
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/jquery.stellar.min.js?alt=media&token=1bd76368-d9b8-41c0-b297-c06e0293e304"></script>
+	<!-- Counter -->
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/jquery.countTo.js?alt=media&token=22e31953-e4f2-451b-8551-d1c8ac86abda"></script>
+	<!-- Magnific Popup -->
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/jquery.magnific-popup.min.js?alt=media&token=b37c4aaa-a04b-4e50-8899-d283f13f5bd6"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/magnific-popup-options.js?alt=media&token=252e265e-2e4e-481e-9497-9d8a1b247854"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/google_map.js?alt=media&token=348a3bd3-da95-4bdd-927d-2d35e8510ac4"></script>
+
+
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/jquery.style.switcher.js?alt=media&token=f76a3714-5f90-4df4-b208-9bc0b6a3d9c1"></script>
+	<script>
+		$(function(){
+			$('#colour-variations ul').styleSwitcher({
+				defaultThemeId: 'theme-switch',
+				hasPreview: false,
+				cookie: {
+		          	expires: 30,
+		          	isManagingLoad: true
+		      	}
+			});
+			$('.option-toggle').click(function() {
+				$('#colour-variations').toggleClass('sleep');
+			});
+		});
+	</script>
+
+
+	<!-- Main JS (Do not remove) -->
+	<script src="https://firebasestorage.googleapis.com/v0/b/asd-developers.appspot.com/o/main.js?alt=media&token=7b65ac36-ac4d-4d9e-8c85-b92e887faf1c"></script>
+
+	</body>
+</html>
